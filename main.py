@@ -28,7 +28,9 @@ Contoh: <code>/rank_koin btc 2026-02-18 10:00 2026-02-28 11:00</code>
 
 <b>/rank_username</b> - Ranking berdasarkan username
 Format: <code>/rank_username &lt;user1&gt; &lt;user2&gt; ... YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2026-02-28 11:00</code>"""
+Contoh: <code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2026-02-28 11:00</code>
+
+<b>/reset_data</b> - Untuk membersihkan tampilan pada website"""
 
 def save_request(data):
     conn = psycopg2.connect(
