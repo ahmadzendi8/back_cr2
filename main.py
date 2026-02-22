@@ -12,23 +12,23 @@ PGPASSWORD = os.environ.get("PGPASSWORD", "")
 POSTGRES_DB = os.environ.get("POSTGRES_DB", "")
 TOKEN = os.environ.get("TOKEN", "")
 
-PANDUAN = """<b>Panduan Penggunaan Bot</b>
+PANDUAN = """<b>Panduan Penggunaan</b>
 
 <b>/rank_all</b> - Ranking semua user
 Format: <code>/rank_all YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_all 2025-08-27 00:00 2025-08-27 23:59</code>
+Contoh: <code>/rank_all 2026-02-18 10:00 2025-02-28 11:00</code>
 
 <b>/rank_level</b> - Ranking berdasarkan level
 Format: <code>/rank_level &lt;nomor_level&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_level 2 2025-08-27 00:00 2025-08-27 23:59</code>
+Contoh: <code>/rank_level 2 2026-02-18 10:00 2025-02-28 11:00</code>
 
 <b>/rank_koin</b> - Ranking berdasarkan kata/koin
 Format: <code>/rank_koin &lt;kata&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_koin btc 2025-08-27 00:00 2025-08-27 23:59</code>
+Contoh: <code>/rank_koin btc 2026-02-18 10:00 2025-02-28 11:00</code>
 
 <b>/rank_username</b> - Ranking berdasarkan username
 Format: <code>/rank_username &lt;user1&gt; &lt;user2&gt; ... YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_username john doe 2025-08-27 00:00 2025-08-27 23:59</code>"""
+Contoh: <code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2025-02-28 11:00</code>"""
 
 def save_request(data):
     conn = psycopg2.connect(
@@ -99,7 +99,7 @@ async def reset_data(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"Gagal reset tampilan: {e}")
 
-async def reset_2025(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def reset_2026(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         conn = psycopg2.connect(
             dbname=POSTGRES_DB,
@@ -322,7 +322,7 @@ if __name__ == "__main__":
     app_telegram.add_handler(CommandHandler("rank_all", rank_all))
     app_telegram.add_handler(CommandHandler("rank_koin", rank_koin))
     app_telegram.add_handler(CommandHandler("reset_data", reset_data))
-    app_telegram.add_handler(CommandHandler("reset_2025", reset_2025))
+    app_telegram.add_handler(CommandHandler("reset_2026", reset_2026))
     app_telegram.add_handler(CommandHandler("export_all", export_all))
     app_telegram.add_handler(CommandHandler("export_waktu", export_waktu))
     app_telegram.add_handler(CommandHandler("rank_username", rank_username))
