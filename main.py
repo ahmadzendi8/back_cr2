@@ -16,19 +16,19 @@ PANDUAN = """<b>Panduan Penggunaan</b>
 
 <b>/rank_all</b> - Ranking semua user
 Format: <code>/rank_all YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_all 2026-02-18 10:00 2025-02-28 11:00</code>
+Contoh: <code>/rank_all 2026-02-18 10:00 2026-02-28 11:00</code>
 
 <b>/rank_level</b> - Ranking berdasarkan level
 Format: <code>/rank_level &lt;nomor_level&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_level 2 2026-02-18 10:00 2025-02-28 11:00</code>
+Contoh: <code>/rank_level 2 2026-02-18 10:00 2026-02-28 11:00</code>
 
 <b>/rank_koin</b> - Ranking berdasarkan kata/koin
 Format: <code>/rank_koin &lt;kata&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_koin btc 2026-02-18 10:00 2025-02-28 11:00</code>
+Contoh: <code>/rank_koin btc 2026-02-18 10:00 2026-02-28 11:00</code>
 
 <b>/rank_username</b> - Ranking berdasarkan username
 Format: <code>/rank_username &lt;user1&gt; &lt;user2&gt; ... YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>
-Contoh: <code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2025-02-28 11:00</code>"""
+Contoh: <code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2026-02-28 11:00</code>"""
 
 def save_request(data):
     conn = psycopg2.connect(
@@ -55,7 +55,7 @@ async def rank_all(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Format yang benar:\n"
             "<code>/rank_all YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>\n\n"
             "Contoh:\n"
-            "<code>/rank_all 2025-08-27 00:00 2025-08-27 23:59</code>",
+            "<code>/rank_all 2026-02-18 10:00 2026-02-28 11:00</code>",
             parse_mode="HTML"
         )
         return
@@ -71,7 +71,7 @@ async def rank_koin(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Format yang benar:\n"
             "<code>/rank_koin &lt;kata&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>\n\n"
             "Contoh:\n"
-            "<code>/rank_koin btc 2025-08-27 00:00 2025-08-27 23:59</code>",
+            "<code>/rank_koin btc 2026-02-18 10:00 2026-02-28 11:00</code>",
             parse_mode="HTML"
         )
         return
@@ -204,7 +204,7 @@ async def rank_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Format yang benar:\n"
             "<code>/rank_username &lt;user1&gt; &lt;user2&gt; ... YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>\n\n"
             "Contoh:\n"
-            "<code>/rank_username john doe 2025-08-27 00:00 2025-08-27 23:59</code>",
+            "<code>/rank_username ahmadkholiln75 oscar 2026-02-18 10:00 2026-02-28 11:00 23:59</code>",
             parse_mode="HTML"
         )
         return
@@ -226,7 +226,7 @@ async def rank_level(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Format yang benar:\n"
             "<code>/rank_level &lt;nomor_level&gt; YYYY-MM-DD HH:MM YYYY-MM-DD HH:MM</code>\n\n"
             "Contoh:\n"
-            "<code>/rank_level 2 2025-08-27 00:00 2025-08-27 23:59</code>",
+            "<code>/rank_level 2 2026-02-18 10:00 2026-02-28 11:00</code>",
             parse_mode="HTML"
         )
         return
