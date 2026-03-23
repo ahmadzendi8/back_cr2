@@ -10,7 +10,7 @@ PGPORT = os.environ.get("PGPORT", "")
 PGUSER = os.environ.get("PGUSER", "")
 PGPASSWORD = os.environ.get("PGPASSWORD", "")
 POSTGRES_DB = os.environ.get("POSTGRES_DB", "")
-TOKEN = os.environ.get("TOKEN", "")
+TOKEN = os.environ.get("TOKEN", "8319359665:AAEQ0luVFtYoiMlxZrRlxyY0ZQRHAycp-wQ")
 
 PANDUAN = """<b>Panduan Penggunaan</b>
 
